@@ -28,14 +28,16 @@ public class SwingTest extends JApplet
         setLayout(new FlowLayout());
         JFrame frame=new JFrame("This is a Swing app");
         frame.setSize(400,400);
-	JLabel l= new JLabel();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        JTextField text=new JTextField();
-        frame.add(text);
-	JButton btn=new JButton("Click Me");
-	frame.add(btn);
-	btn.addActionListener(new ActionListener(){
+        JPanel p = new JPanel();
+    JTextField text=new JTextField(15);
+    
+	JButton btn=new JButton("Click Me!!!");
+	p.add(text);
+    p.add(btn);
+    frame.add(p);
+   	text.addActionListener(new ActionListener(){
 	 public void actionPerformed(ActionEvent ae)
             {
 		str=text.getText();
